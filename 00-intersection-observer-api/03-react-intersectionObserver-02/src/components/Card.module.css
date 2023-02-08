@@ -1,0 +1,19 @@
+.card {
+  width: 400px;
+  height: 200px;
+  background-color: #FFB3CBFF;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(500px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.show {
+  transform: translateX(0px);
+  opacity: 1
+}

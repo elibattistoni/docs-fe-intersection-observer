@@ -1,0 +1,26 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.card {
+  background-color: cadetblue;
+  border: 1px solid black;
+  border-radius: .25rem;
+  padding: .5rem;
+  /* ! this is their right margin when they appear/disappear */
+  /* transform: translateX(100px); */
+  transform: translateX(500px);
+  opacity: 0;
+  /* transition: 150ms; */
+  transition: 1s;
+}
+
+.card.show {
+  /* ! this is their left margin when they are visible */
+  /* transform: translateX(0); */
+  transform: translateX(100px);
+  opacity: 1
+}
