@@ -1,14 +1,42 @@
+import { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import useIntersection from "../hooks/useIntersection";
 
 import classes from "./MainNavigation.module.css";
 
 export default function MainNavigation() {
-  // const [targetRef, isTargetVisible] = useIntersection("0px");
-  // console.log("isTargetVisible", isTargetVisible); ref={targetRef}
+  // const targetRef = useRef();
+  // const [isIntersecting, setIsIntersecting] = useState(false);
+  // console.log("MainNavigation");
+
+  // useEffect(() => {
+  //   console.log("USE EFFECT!");
+  //   console.log("targetRef", targetRef);
+  //   const target = targetRef.current;
+
+  //   const options = {
+  //     root: null,
+  //     rootMargin: "0px",
+  //     threshold: 0.7,
+  //   };
+  //   const observer = new IntersectionObserver((entries, observer) => {
+  //     const [entry] = entries;
+  //     setIsIntersecting(entry.isIntersecting);
+  //   }, options);
+
+  //   if (target) observer.observe(target);
+
+  //   return () => {
+  //     if (isIntersecting) observer.unobserve(target);
+  //   };
+  // }, []);
+
+  let classNames = classes.header;
+  // if (!isIntersecting) classNames = `${classes.sticky} ${classes.sticky}`;
+  // console.log("classNames", classNames);
+  // ref={targetRef}
 
   return (
-    <header className={classes.header}>
+    <header className={classNames}>
       <h1 className={classes.title}>
         <NavLink to="/" end>
           React & the Intersection Observer API
