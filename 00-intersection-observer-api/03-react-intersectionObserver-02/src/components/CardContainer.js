@@ -1,17 +1,23 @@
+import React from "react";
 import Card from "./Card";
 
 import classes from "./CardContainer.module.css";
 
 const cards = Array.from(Array(20).keys());
 
-export default function CardContainer() {
+const CardContainer = React.forwardRef((props, ref) => {
   return (
-    <ul className={classes.cardsList}>
-      {cards.map((card) => (
-        <li key={card}>
-          <Card cardNum={card} />
-        </li>
-      ))}
-    </ul>
+    <>
+      <h2 ref={ref}>Scroll animation!</h2>
+      <ul className={classes.cardsList}>
+        {cards.map((card) => (
+          <li key={card}>
+            <Card cardNum={card} />
+          </li>
+        ))}
+      </ul>
+    </>
   );
-}
+});
+
+export default CardContainer;

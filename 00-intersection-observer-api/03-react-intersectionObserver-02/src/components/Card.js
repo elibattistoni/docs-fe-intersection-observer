@@ -9,7 +9,7 @@ export default function Card({ cardNum }) {
       ref={targetRef}
       className={`${classes.card} ${isTargetVisible ? classes.show : ""}`}
     >
-      This is card number {cardNum}
+      {cardNum}
     </div>
   );
 }

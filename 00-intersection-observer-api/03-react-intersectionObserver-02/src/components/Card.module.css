@@ -1,5 +1,5 @@
 .card {
-  font-size: 2rem;
+  font-size: 6rem;
   width: 400px;
   height: 200px;
   background-color: var(--color-5-300);
@@ -11,7 +11,7 @@
   align-items: center;
   transform: translateX(500px);
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.8s;
 }
 
 .show {
