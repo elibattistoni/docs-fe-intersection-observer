@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 
-const useIntersection = () => {
+const useIntersection = (rootMargin) => {
   const targetRef = useRef(null);
   const [isTargetVisible, setIsTargetVisible] = useState(false);
 
@@ -12,7 +12,7 @@ const useIntersection = () => {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "-100px 0px 0px 0px",
+      rootMargin: rootMargin,
       threshold: 0.7,
     };
 

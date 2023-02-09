@@ -1,13 +1,178 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-gray-100: #e6e6e6;
+  --color-gray-200: #cccccc;
+  --color-gray-300: #b3b3b3;
+  --color-gray-400: #999999;
+  --color-gray-500: #808080;
+  --color-gray-600: #666666;
+  --color-gray-700: #4d4d4d;
+  --color-gray-800: #333333;
+  --color-gray-900: #1a1a1a;
+
+  --color-1-300: #7bdff2;
+  --color-1-100: #95e5f5;
+  --color-1-500: #6fc9da;
+
+  --color-2-300: #b2f7ef;
+  --color-2-100: #d1faf5;
+  --color-2-200: #b2f7ef;
+  --color-2-500: #a0ded7;
+  --color-2-700: #7dada7;
+
+  --color-3-300: #eff7f6;
+  --color-3-100: #f2f9f8;
+  --color-3-500: #d7dedd;
+
+  --color-4-300: #f7d6e0;
+  --color-4-100: #f9dee6;
+  --color-4-500: #dec1ca;
+
+  --color-5-300: #f2b5d4;
+  --color-5-100: #f2b5d4;
+  --color-5-500: #daa3bf;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+  /* this makes it that 1rem == 10px */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Grandstander', sans-serif;
+  font-weight: 500;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-900)
+}
+
+/* === text shakings */
+
+/* 
+
+body { font-family: sans-serif; }
+
+div {
+  text-align: center;
+}
+
+
+span {
+  background: #48abe0;
+  color: white;
+  padding: 1.5rem;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+span.strong-hover-shake:hover {
+  animation: tilt-shaking 0.15s infinite;
+}
+
+span.gentle-hover-shake:hover {
+  animation: tilt-shaking 0.25s infinite;
+}
+
+span.gentle-tilt-move-shake:hover {
+  animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+span.strong-tilt-move-shake:hover {
+  animation: tilt-n-move-shaking 0.15s infinite;
+}
+
+span.constant-tilt-shake {
+  animation: tilt-shaking 0.3s infinite;
+}
+
+span.vertical-shake {
+  animation: vertical-shaking 0.35s infinite;
+}
+
+span.horizontal-shake {
+  animation: horizontal-shaking 0.35s infinite;
+}
+
+span.rise-shake {
+  animation: jump-shaking 0.83s infinite;
+}
+
+span.skew-shake-x {
+  animation: skew-x-shake 1.3s infinite;
+}
+
+span.skew-shake-y {
+  animation: skew-y-shake 1.3s infinite;
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes vertical-shaking {
+  0% { transform: translateY(0) }
+  25% { transform: translateY(5px) }
+  50% { transform: translateY(-5px) }
+  75% { transform: translateY(5px) }
+  100% { transform: translateY(0) }
+}
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+
+@keyframes jump-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateY(-9px) }
+  35% { transform: translateY(-9px) rotate(17deg) }
+  55% { transform: translateY(-9px) rotate(-17deg) }
+  65% { transform: translateY(-9px) rotate(17deg) }
+  75% { transform: translateY(-9px) rotate(-17deg) }
+  100% { transform: translateY(0) rotate(0) }
+}
+
+@keyframes skew-x-shake {
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+
+@keyframes skew-y-shake {
+  0% { transform: skewY(-15deg); }
+  5% { transform: skewY(15deg); }
+  10% { transform: skewY(-15deg); }
+  15% { transform: skewY(15deg); }
+  20% { transform: skewY(0deg); }
+  100% { transform: skewY(0deg); }  
+}
+
+*/

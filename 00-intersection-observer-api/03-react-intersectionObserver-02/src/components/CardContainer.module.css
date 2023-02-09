@@ -1,8 +1,7 @@
 .cardsList {
   list-style: none;
-  background-color: blueviolet;
   width: 700px;
-  margin: auto;
+  margin: 4rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;

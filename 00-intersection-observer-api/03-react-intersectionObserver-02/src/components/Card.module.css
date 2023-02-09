@@ -1,9 +1,10 @@
 .card {
+  font-size: 2rem;
   width: 400px;
   height: 200px;
-  background-color: #FFB3CBFF;
+  background-color: var(--color-5-300);
   border: 1px solid black;
-  border-radius: 1rem;
+  border-radius: 5px;
   margin: 1rem 0;
   display: flex;
   justify-content: center;
