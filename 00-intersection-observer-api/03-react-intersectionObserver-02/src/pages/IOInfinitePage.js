@@ -1,11 +1,16 @@
-import classes from "./IOInfinitePage.module.css";
+import IOPage from "./IOPage";
+import CardContainer from "../components/cards/CardContainer";
+
+const cards = Array.from(Array(5).keys());
 
 function IOInfinitePage() {
   return (
-    <>
-      <h2>IOInfinitePage</h2>
-      <section></section>
-    </>
+    <IOPage
+      title="Infinite scroll animation with the Intersection Observer API"
+      subtitle="Infinite scroll animation!"
+    >
+      <CardContainer scrollType="infinite" />
+    </IOPage>
   );
 }
 

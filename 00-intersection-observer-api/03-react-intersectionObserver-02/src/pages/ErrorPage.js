@@ -1,5 +1,5 @@
-import MainContainer from "../components/MainContainer";
-import MainNavigation from "../components/MainNavigation";
+import MainContainer from "../components/layout/MainContainer";
+import MainNavigation from "../components/layout/MainNavigation";
 
 function ErrorPage() {
   return (

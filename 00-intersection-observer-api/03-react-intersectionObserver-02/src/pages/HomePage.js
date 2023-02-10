@@ -18,7 +18,10 @@ function HomePage() {
             layout and a common error page
           </li>
           <li>The usage of the following React hooks: useSatate(), useRef()</li>
-          <li>An example of Ract.forwardRef()</li>
+          <li>
+            An example of Ract.forwardRef() - actually substituted with nested
+            components
+          </li>
           <li>
             A Custom Hook for implementing the Intersection Observer API with
             React

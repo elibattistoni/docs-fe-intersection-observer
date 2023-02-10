@@ -51,8 +51,8 @@
 }
 
 .list {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 4rem;
   justify-content: space-between;
   font-size: 1.8rem

@@ -1,4 +1,4 @@
-import useBasicIntersection from "../hooks/useBasicIntersection";
+import useBasicIntersection from "../../hooks/useBasicIntersection";
 import classes from "./Card.module.css";
 
 function Card({ cardNum }) {

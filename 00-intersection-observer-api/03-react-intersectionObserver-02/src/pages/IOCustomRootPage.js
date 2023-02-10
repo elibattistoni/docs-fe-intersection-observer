@@ -1,5 +1,3 @@
-import classes from "./IOCustomRootPage.module.css";
-
 function IOCustomRootPage() {
   return (
     <>

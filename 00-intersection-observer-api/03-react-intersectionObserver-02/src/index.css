@@ -76,6 +76,16 @@ p, span, div, section, ul, ol {
   font-weight: 400;
 }
 
+.cardsList {
+  list-style: none;
+  width: 700px;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* === text shakings */
 
 /* 
