@@ -2,7 +2,7 @@ import { useRef } from "react";
 import CardContainer from "../components/CardContainer";
 import classes from "./IOBasicsPage.module.css";
 
-export default function IOBasicsPage() {
+function IOBasicsPage() {
   const containerRef = useRef();
 
   function smoothScrollHandler() {
@@ -13,7 +13,7 @@ export default function IOBasicsPage() {
   }
 
   return (
-    <div className={classes.container}>
+    <>
       <h2>Basic Implementation of the Intersection Observer API with React</h2>
       <h3 className={classes.instructions}>
         Scroll down to see the effect! or click{" "}
@@ -21,6 +21,8 @@ export default function IOBasicsPage() {
       </h3>
       <div className={classes.empty}></div>
       <CardContainer ref={containerRef} />
-    </div>
+    </>
   );
 }
+
+export default IOBasicsPage;

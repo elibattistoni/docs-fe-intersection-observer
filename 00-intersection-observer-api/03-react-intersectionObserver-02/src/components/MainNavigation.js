@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import classes from "./MainNavigation.module.css";
 
-export default function MainNavigation() {
+function MainNavigation() {
   const navRef = useRef();
   const [isIntersecting, setIsIntersecting] = useState(true);
 
@@ -24,7 +24,7 @@ export default function MainNavigation() {
     window.addEventListener("scroll", onScroll);
 
     return () => {
-      console.log("remove event listener!");
+      // console.log("remove event listener!");
       window.removeEventListener("scroll", onScroll);
     };
   }, [isIntersecting]);
@@ -88,3 +88,5 @@ export default function MainNavigation() {
     </header>
   );
 }
+
+export default MainNavigation;

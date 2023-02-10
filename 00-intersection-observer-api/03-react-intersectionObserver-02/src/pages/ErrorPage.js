@@ -1,13 +1,16 @@
+import MainContainer from "../components/MainContainer";
 import MainNavigation from "../components/MainNavigation";
 
-export default function ErrorPage() {
+function ErrorPage() {
   return (
     <>
       <MainNavigation />
-      <main>
-        <h1>An error occurred!</h1>
+      <MainContainer>
+        <h2>An error occurred!</h2>
         <p>Could not find this page!</p>
-      </main>
+      </MainContainer>
     </>
   );
 }
+
+export default ErrorPage;

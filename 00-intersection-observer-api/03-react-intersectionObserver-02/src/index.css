@@ -35,6 +35,9 @@
   --color-5-300: #f2b5d4;
   --color-5-100: #f2b5d4;
   --color-5-500: #daa3bf;
+
+  --box-shadow-primary: 0 1px 5px rgba(0, 0, 0, 0.3);
+  --box-shadow-secondary: 0 2px 6px rgba(0, 0, 0, 0.4)
 }
 
 * {
@@ -54,6 +57,15 @@ body {
   font-weight: 500;
   background-color: var(--color-gray-100);
   color: var(--color-gray-900)
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem
+}
+
+p {
+  font-size: 2.4rem;
 }
 
 /* === text shakings */

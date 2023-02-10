@@ -1,3 +1,11 @@
-export default function IOCustomRootPage() {
-  return <h1>IOCustomRootPage</h1>;
+import classes from "./IOCustomRootPage.module.css";
+
+function IOCustomRootPage() {
+  return (
+    <>
+      <h2>IOCustomRootPage</h2>
+    </>
+  );
 }
+
+export default IOCustomRootPage;

@@ -8,7 +8,9 @@ const cards = Array.from(Array(20).keys());
 const CardContainer = React.forwardRef((props, ref) => {
   return (
     <>
-      <h2 ref={ref}>Scroll animation!</h2>
+      <h2 ref={ref} className={classes.title}>
+        Scroll animation!
+      </h2>
       <ul className={classes.cardsList}>
         {cards.map((card) => (
           <li key={card}>
