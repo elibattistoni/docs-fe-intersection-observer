@@ -9,13 +9,19 @@
   align-items: center;
   border-bottom: 1px solid var(--color-gray-500);
   transition: 0.4s;
+  opacity: 1
 }
 
-.sticky {
-  opacity: 0.5;
+.header.sticky {
+  opacity: 0.7;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  gap: 2rem;
+  padding: 2rem 0 3rem;
 }
 
-.sitcky:hover {
+.header.sitcky:hover {
   opacity: 1
 }
 

@@ -4,36 +4,26 @@ import { NavLink } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 
 export default function MainNavigation() {
-  // const targetRef = useRef();
-  // const [isIntersecting, setIsIntersecting] = useState(false);
-  // console.log("MainNavigation");
+  const targetRef = useRef();
+  const [isIntersecting, setIsIntersecting] = useState(true);
 
-  // useEffect(() => {
-  //   console.log("USE EFFECT!");
-  //   console.log("targetRef", targetRef);
-  //   const target = targetRef.current;
+  useEffect(() => {
+    console.log("use effect!");
+    const onScroll = () => {
+      window.scrollY < 182 ? setIsIntersecting(true) : setIsIntersecting(false);
+    };
 
-  //   const options = {
-  //     root: null,
-  //     rootMargin: "0px",
-  //     threshold: 0.7,
-  //   };
-  //   const observer = new IntersectionObserver((entries, observer) => {
-  //     const [entry] = entries;
-  //     setIsIntersecting(entry.isIntersecting);
-  //   }, options);
+    window.addEventListener("scroll", onScroll);
 
-  //   if (target) observer.observe(target);
+    return () => {
+      console.log("remove event listener!");
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [isIntersecting]);
 
-  //   return () => {
-  //     if (isIntersecting) observer.unobserve(target);
-  //   };
-  // }, []);
-
-  let classNames = classes.header;
-  // if (!isIntersecting) classNames = `${classes.sticky} ${classes.sticky}`;
-  // console.log("classNames", classNames);
-  // ref={targetRef}
+  const classNames = isIntersecting
+    ? `${classes.header}`
+    : `${classes.header} ${classes.sticky}`;
 
   return (
     <header className={classNames}>
@@ -44,7 +34,7 @@ export default function MainNavigation() {
       </h1>
       <nav>
         <ul className={classes.list}>
-          <li className={classes.listItem}>
+          <li className={classes.listItem} ref={targetRef}>
             <NavLink
               to="/"
               className={({ isActive }) =>
