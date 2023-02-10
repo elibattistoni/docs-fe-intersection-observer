@@ -56,16 +56,24 @@ body {
   font-family: 'Grandstander', sans-serif;
   font-weight: 500;
   background-color: var(--color-gray-100);
-  color: var(--color-gray-900)
+  color: var(--color-gray-900);
+  line-height: 1.5;
 }
 
 h2 {
   font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 2rem
 }
 
-p {
+h3 {
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+p, span, div, section, ul, ol {
   font-size: 2.4rem;
+  font-weight: 400;
 }
 
 /* === text shakings */

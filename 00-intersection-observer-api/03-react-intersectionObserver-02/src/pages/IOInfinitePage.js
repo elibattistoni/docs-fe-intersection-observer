@@ -4,6 +4,7 @@ function IOInfinitePage() {
   return (
     <>
       <h2>IOInfinitePage</h2>
+      <section></section>
     </>
   );
 }
