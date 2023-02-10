@@ -34,58 +34,60 @@ function MainNavigation() {
     : `${classes.header} ${classes.sticky}`;
 
   return (
-    <header ref={navRef} className={classNames}>
-      <h1 className={classes.title}>
-        <NavLink to="/" end>
-          React & the Intersection Observer API
-        </NavLink>
-      </h1>
-      <nav>
-        <ul className={classes.list}>
-          <li className={classes.listItem}>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-              end
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className={classes.listItem}>
-            <NavLink
-              to="/io-basics"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-            >
-              IO - basics
-            </NavLink>
-          </li>
-          <li className={classes.listItem}>
-            <NavLink
-              to="/io-infinite"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-            >
-              IO - infinite scrolling
-            </NavLink>
-          </li>
-          <li className={classes.listItem}>
-            <NavLink
-              to="/io-custom-root"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-            >
-              IO - custom root
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div ref={navRef} className={classes.outerContainer}>
+      <header className={classNames}>
+        <h1 className={classes.title}>
+          <NavLink to="/" end>
+            React & the Intersection Observer API
+          </NavLink>
+        </h1>
+        <nav>
+          <ul className={classes.list}>
+            <li className={classes.listItem}>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? classes.active : undefined
+                }
+                end
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className={classes.listItem}>
+              <NavLink
+                to="/io-basics"
+                className={({ isActive }) =>
+                  isActive ? classes.active : undefined
+                }
+              >
+                IO - basics
+              </NavLink>
+            </li>
+            <li className={classes.listItem}>
+              <NavLink
+                to="/io-infinite"
+                className={({ isActive }) =>
+                  isActive ? classes.active : undefined
+                }
+              >
+                IO - infinite scrolling
+              </NavLink>
+            </li>
+            <li className={classes.listItem}>
+              <NavLink
+                to="/io-custom-root"
+                className={({ isActive }) =>
+                  isActive ? classes.active : undefined
+                }
+              >
+                IO - custom root
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
   );
 }
 
