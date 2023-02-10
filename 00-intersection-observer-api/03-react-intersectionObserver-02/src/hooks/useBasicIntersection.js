@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 
-const useIntersection = (rootMargin) => {
+const useBasicIntersection = (rootMargin) => {
   const targetRef = useRef(null);
   const [isTargetVisible, setIsTargetVisible] = useState(false);
 
@@ -30,4 +30,4 @@ const useIntersection = (rootMargin) => {
   return [targetRef, isTargetVisible];
 };
 
-export default useIntersection;
+export default useBasicIntersection;

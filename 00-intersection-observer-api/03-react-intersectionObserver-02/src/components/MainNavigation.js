@@ -4,14 +4,22 @@ import { NavLink } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 
 export default function MainNavigation() {
-  const targetRef = useRef();
+  const navRef = useRef();
   const [isIntersecting, setIsIntersecting] = useState(true);
 
   useEffect(() => {
-    console.log("use effect!");
-    const onScroll = () => {
-      window.scrollY < 182 ? setIsIntersecting(true) : setIsIntersecting(false);
-    };
+    console.log("USEEFFECT");
+
+    // get the height of the header/navigation bar
+    let navHeight;
+    if (navRef.current)
+      navHeight = navRef.current.getBoundingClientRect().height;
+
+    function onScroll() {
+      window.scrollY <= navHeight
+        ? setIsIntersecting(true)
+        : setIsIntersecting(false);
+    }
 
     window.addEventListener("scroll", onScroll);
 
@@ -26,7 +34,7 @@ export default function MainNavigation() {
     : `${classes.header} ${classes.sticky}`;
 
   return (
-    <header className={classNames}>
+    <header ref={navRef} className={classNames}>
       <h1 className={classes.title}>
         <NavLink to="/" end>
           React & the Intersection Observer API
@@ -34,7 +42,7 @@ export default function MainNavigation() {
       </h1>
       <nav>
         <ul className={classes.list}>
-          <li className={classes.listItem} ref={targetRef}>
+          <li className={classes.listItem}>
             <NavLink
               to="/"
               className={({ isActive }) =>

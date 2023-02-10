@@ -1,8 +1,9 @@
-import useIntersection from "../hooks/useIntersection";
+import useBasicIntersection from "../hooks/useBasicIntersection";
 import classes from "./Card.module.css";
 
 export default function Card({ cardNum }) {
-  const [targetRef, isTargetVisible] = useIntersection("-100px 0px 0px 0px");
+  const [targetRef, isTargetVisible] =
+    useBasicIntersection("-300px 0px 0px 0px");
 
   return (
     <div

@@ -1,7 +1,7 @@
 .card {
   font-size: 6rem;
   width: 400px;
-  height: 200px;
+  height: 150px;
   background-color: var(--color-5-300);
   border: 1px solid black;
   border-radius: 5px;
