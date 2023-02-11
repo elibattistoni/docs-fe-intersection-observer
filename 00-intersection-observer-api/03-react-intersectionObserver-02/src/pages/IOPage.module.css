@@ -16,3 +16,27 @@
 .empty {
   height: 100vh
 }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 2rem;
+  width: 100vw
+}
+
+.footer button {
+  font-size: 4rem;
+  height: 6rem;
+  width: 6rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-gray-800);
+  box-shadow: var(--box-shadow-secondary);
+  color: var(--color-gray-800);
+  background-color: var(--color-gray-200);
+}
+
+.footer button:hover {
+  cursor: pointer;
+}
