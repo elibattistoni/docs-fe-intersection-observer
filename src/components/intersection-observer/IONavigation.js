@@ -1,9 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
+import classes from "./IONavigation.module.css";
 
-import classes from "./MainNavigation.module.css";
-
-function MainNavigation() {
+function IONavigation() {
   const navRef = useRef();
   const [isIntersecting, setIsIntersecting] = useState(true);
 
@@ -34,29 +33,19 @@ function MainNavigation() {
     : `${classes.header} ${classes.sticky}`;
 
   return (
+    //! IMPORTANT CAHNGE CSS CLASSES!!!
     <div ref={navRef} className={classes.outerContainer}>
       <header className={classNames}>
         <h1 className={classes.title}>
-          <NavLink to="/" end>
-            React & the Intersection Observer API
+          <NavLink to="/intersection-observer" end>
+            React & Intersection Observer API
           </NavLink>
         </h1>
         <nav>
           <ul className={classes.list}>
             <li className={classes.listItem}>
               <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? classes.active : undefined
-                }
-                end
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className={classes.listItem}>
-              <NavLink
-                to="/io-basics"
+                to="/intersection-observer/basic"
                 className={({ isActive }) =>
                   isActive ? classes.active : undefined
                 }
@@ -66,7 +55,17 @@ function MainNavigation() {
             </li>
             <li className={classes.listItem}>
               <NavLink
-                to="/io-custom-root"
+                to="/intersection-observer/variant"
+                className={({ isActive }) =>
+                  isActive ? classes.active : undefined
+                }
+              >
+                IO - variant
+              </NavLink>
+            </li>
+            <li className={classes.listItem}>
+              <NavLink
+                to="/intersection-observer/custom-root"
                 className={({ isActive }) =>
                   isActive ? classes.active : undefined
                 }
@@ -81,4 +80,4 @@ function MainNavigation() {
   );
 }
 
-export default MainNavigation;
+export default IONavigation;

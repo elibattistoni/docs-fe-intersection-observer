@@ -1,4 +1,5 @@
-import useBasicIntersection from "../../hooks/useBasicIntersection";
+import useBasicIntersection from "../../hooks/intersection-observer/useBasicIntersection";
+
 import classes from "./Card.module.css";
 
 function Card({ cardNum }) {
@@ -8,7 +9,9 @@ function Card({ cardNum }) {
   return (
     <div
       ref={targetRef}
-      className={`${classes.card} ${isTargetVisible ? classes.show : ""}`}
+      className={`${classes["card"]} ${
+        isTargetVisible ? classes["card--show"] : ""
+      }`}
     >
       {cardNum}
     </div>

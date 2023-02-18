@@ -1,0 +1,26 @@
+.homepage__button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 3
+}
+
+.homepage__button a {
+  text-decoration: none;
+  color: var(--color-gray-800);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: 0.5s
+}
+
+.homepage__button a:hover {
+  background-color: var(--color-gray-150);
+  box-shadow: var(--box-shadow-primary);
+}
+
+.homepage__button a.active {
+  text-decoration: underline;
+  color: inherit
+}
