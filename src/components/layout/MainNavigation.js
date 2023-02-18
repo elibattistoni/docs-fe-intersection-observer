@@ -8,7 +8,7 @@ function MainNavigation() {
   const [isIntersecting, setIsIntersecting] = useState(true);
 
   useEffect(() => {
-    console.log("USEEFFECT");
+    // console.log("USEEFFECT");
 
     // get the height of the header/navigation bar
     let navHeight;
@@ -62,16 +62,6 @@ function MainNavigation() {
                 }
               >
                 IO - basics
-              </NavLink>
-            </li>
-            <li className={classes.listItem}>
-              <NavLink
-                to="/io-infinite"
-                className={({ isActive }) =>
-                  isActive ? classes.active : undefined
-                }
-              >
-                IO - infinite scrolling
               </NavLink>
             </li>
             <li className={classes.listItem}>

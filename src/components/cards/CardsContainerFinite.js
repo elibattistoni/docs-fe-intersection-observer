@@ -1,8 +1,8 @@
 import Card from "./Card";
 
-const cards = Array.from(Array(10).keys());
+const cards = Array.from(Array(20).keys());
 
-function CardsFinite() {
+function CardsContainerFinite() {
   return (
     <ul className="cardsList">
       {cards.map((card) => (
@@ -14,4 +14,4 @@ function CardsFinite() {
   );
 }
 
-export default CardsFinite;
+export default CardsContainerFinite;

@@ -1,5 +1,5 @@
 import IOPage from "./IOPage";
-import CardContainer from "../components/cards/CardContainer";
+import CardsContainerFinite from "../components/cards/CardsContainerFinite";
 
 function IOBasicsPage() {
   return (
@@ -7,7 +7,7 @@ function IOBasicsPage() {
       title="Basic Implementation of the Intersection Observer API with React"
       subtitle="Finite scroll animation!"
     >
-      <CardContainer scrollType="finite" />
+      <CardsContainerFinite />
     </IOPage>
   );
 }
