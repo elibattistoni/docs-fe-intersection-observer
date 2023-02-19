@@ -6,7 +6,7 @@ function IOHome() {
       <h2>Welcome!</h2>
       <section className={classes["home__description"]}>
         <p>
-          This is a project for practicing some cool animations and transition
+          This is a project for practicing some cool animations and transitions
           features using React without the help of other libraries, using only
           the browser APIs and CSS.
           <br />

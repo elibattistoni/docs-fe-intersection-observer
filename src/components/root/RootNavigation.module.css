@@ -41,6 +41,7 @@
 .nav-item--title {
   composes: nav-item;
   color: var(--github-blue-10);
+  padding-bottom: 1rem
 }
 
 .nav-item--link {

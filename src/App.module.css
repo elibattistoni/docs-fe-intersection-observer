@@ -90,5 +90,6 @@
 }
 
 .home__description {
-  composes: flex--col
+  composes: flex--col;
+  align-items: flex-start;
 }

@@ -5,17 +5,20 @@ import classes from "./IONavigation.module.css";
 function IONavigation() {
   const navRef = useRef();
   const [isIntersecting, setIsIntersecting] = useState(true);
+  const [navHeight, setNavHeight] = useState(null);
 
   useEffect(() => {
-    // console.log("USEEFFECT");
+    console.log("USEEFFECT", new Date().toLocaleTimeString());
 
-    // get the height of the header/navigation bar
-    let navHeight;
-    if (navRef.current)
-      navHeight = navRef.current.getBoundingClientRect().height;
+    // get the height of the header/navigation bar --> NB this should be added to the height of the higher-level navbar
+    if (navRef.current && !navHeight) {
+      console.log("set navRect height!!!!");
+      const navRect = navRef.current.getBoundingClientRect();
+      setNavHeight(navRect.top + navRect.height);
+    }
 
     function onScroll() {
-      window.scrollY <= navHeight
+      window.scrollY <= navHeight - 100
         ? setIsIntersecting(true)
         : setIsIntersecting(false);
     }
@@ -26,7 +29,7 @@ function IONavigation() {
       // console.log("remove event listener!");
       window.removeEventListener("scroll", onScroll);
     };
-  }, [isIntersecting]);
+  }, [isIntersecting, navHeight]);
 
   const headerStyles = isIntersecting
     ? `${classes["header"]}`
