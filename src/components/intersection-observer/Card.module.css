@@ -2,9 +2,9 @@
   font-size: 6rem;
   width: 400px;
   height: 150px;
-  background-color: var(--color-4-300);
+  /* background-color: ; */
   /* border: 1px solid black; */
-  box-shadow: var(--box-shadow-secondary);
+  /* box-shadow: ; */
   border-radius: 5px;
   margin: 1rem 0;
   display: flex;

@@ -1,0 +1,73 @@
+.link--active {
+  text-decoration: underline;
+}
+
+.animation--shake:hover {
+  animation: shakeShake .25s infinite;
+}
+
+@keyframes shakeShake {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(2px, 2px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+
+  75% {
+    transform: translate(-2px, 2px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.btn--green {
+  color: var(--github-green-8);
+  background-color: var(--github-green-2);
+  border: 1px solid var(--github-green-4)
+}
+
+.btn--yellow {
+  color: var(--github-yellow-8);
+  background-color: var(--github-yellow-2);
+  border: 1px solid var(--github-yellow-4)
+}
+
+.btn--orange {
+  color: var(--github-orange-8);
+  background-color: var(--github-orange-2);
+  border: 1px solid var(--github-orange-4)
+}
+
+.btn--red {
+  color: var(--github-red-8);
+  background-color: var(--github-red-2);
+  border: 1px solid var(--github-red-4)
+}
+
+.btn--pink {
+  color: var(--github-pink-8);
+  background-color: var(--github-pink-2);
+  border: 1px solid var(--github-pink-4)
+}
+
+.btn--violet {
+  color: var(--github-violet-8);
+  background-color: var(--github-violet-2);
+  border: 1px solid var(--github-violet-4)
+}
+
+.flex--col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem
+}

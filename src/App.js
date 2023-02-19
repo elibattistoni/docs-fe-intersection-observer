@@ -86,6 +86,7 @@ const router = createBrowserRouter([
           { path: "navigation-highlight", element: <NavigationHighlight /> },
           //!
           { path: "left-menu-slider", element: <LeftMenuSlider /> },
+          //! NB TODO TO ADD: layout that changes if you are left-handed vs. right-handed
         ],
       },
       {

@@ -1,45 +1,156 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;600;700&display=swap');
 
 :root {
-  --color-white: #ffffff;
-  --color-black: #000000;
 
-  --color-gray-100: #e6e6e6;
-  --color-gray-150: #DBDBDB;
-  --color-gray-200: #cccccc;
-  --color-gray-300: #b3b3b3;
-  --color-gray-400: #999999;
-  --color-gray-500: #808080;
-  --color-gray-600: #666666;
-  --color-gray-700: #4d4d4d;
-  --color-gray-800: #333333;
-  --color-gray-900: #1a1a1a;
+  --shadow-small: 0 1px 5px rgba(0, 0, 0, 0.3);
+  --shadow-big: 0 2px 6px rgba(0, 0, 0, 0.4);
 
-  --color-1-300: #7bdff2;
-  --color-1-100: #95e5f5;
-  --color-1-500: #6fc9da;
+  --github-green-1: #b4f1b4;
+  --github-green-2: #8ddb8c;
+  --github-green-3: #6ac46d;
+  --github-green-4: #57ab5a;
+  --github-green-5: #46954a;
+  --github-green-6: #347d39;
+  --github-green-7: #2c6a30;
+  --github-green-8: #245829;
+  --github-green-9: #1b4721;
+  --github-green-10: #103417;
 
-  --color-2-300: #b2f7ef;
-  --color-2-100: #d1faf5;
-  --color-2-200: #b2f7ef;
-  --color-2-500: #a0ded7;
-  --color-2-700: #7dada7;
 
-  --color-3-300: #eff7f6;
-  --color-3-100: #f2f9f8;
-  --color-3-500: #d7dedd;
+  --github-yellow-1: #fbe090;
+  --github-yellow-2: #eac55f;
+  --github-yellow-3: #daaa3f;
+  --github-yellow-4: #c69027;
+  --github-yellow-5: #ae7c13;
+  --github-yellow-6: #966600;
+  --github-yellow-7: #825303;
+  --github-yellow-8: #6c4400;
+  --github-yellow-9: #593600;
+  --github-yellow-10: #452700;
 
-  --color-4-300: #f7d6e0;
-  --color-4-100: #f9dee6;
-  --color-4-500: #dec1ca;
+  --github-orange-1: #ffdeb3;
+  --github-orange-2: #ffbc6f;
+  --github-orange-3: #f69d50;
+  --github-orange-4: #e0823d;
+  --github-orange-5: #cc6b2c;
+  --github-orange-6: #af5622;
+  --github-orange-7: #94461b;
+  --github-orange-8: #7f3913;
+  --github-orange-9: #682d10;
+  --github-orange-10: #4d210d;
 
-  --color-5-300: #f2b5d4;
-  --color-5-100: #f2b5d4;
-  --color-5-500: #daa3bf;
+  --github-red-1: #ffdad5;
+  --github-red-2: #ffb8b0;
+  --github-red-3: #ff938b;
+  --github-red-4: #f47068;
+  --github-red-5: #e5534b;
+  --github-red-6: #c93b37;
+  --github-red-7: #ad2e2b;
+  --github-red-8: #922323;
+  --github-red-9: #78191b;
+  --github-red-10: #5d1012;
 
-  --box-shadow-primary: 0 1px 5px rgba(0, 0, 0, 0.3);
-  --box-shadow-secondary: 0 2px 6px rgba(0, 0, 0, 0.4)
+  --github-pink-1: #ffd7eb;
+  --github-pink-2: #ffb3d8;
+  --github-pink-3: #fc8dc7;
+  --github-pink-4: #e275ad;
+  --github-pink-5: #c96198;
+  --github-pink-6: #ae4c82;
+  --github-pink-7: #983b6e;
+  --github-pink-8: #7e325a;
+  --github-pink-9: #692649;
+  --github-pink-10: #551639;
+
+  --github-violet-1: #edddff;
+  --github-violet-2: #dcbdfb;
+  --github-violet-3: #cb9efb;
+  --github-violet-4: #b083f0;
+  --github-violet-5: #986ee2;
+  --github-violet-6: #8256d0;
+  --github-violet-7: #6b44bc;
+  --github-violet-8: #5936a2;
+  --github-violet-9: #472c82;
+  --github-violet-10: #362160;
+
+  --github-blue-1: #c6e6ff;
+  --github-blue-2: #96d0ff;
+  --github-blue-3: #6cb6ff;
+  --github-blue-4: #529bf5;
+  --github-blue-5: #4284e4;
+  --github-blue-6: #316dca;
+  --github-blue-7: #255ab2;
+  --github-blue-8: #1b4a91;
+  --github-blue-9: #143d79;
+  --github-blue-10: #102d5c;
+
+  --github-white: #e6ecf2;
+  --github-gray-1: #cdd9e5;
+  --github-gray-2: #afbac5;
+  --github-gray-3: #909dab;
+  --github-gray-4: #768390;
+  --github-gray-5: #626e7b;
+  --github-gray-6: #545d68;
+  --github-gray-7: #434c56;
+  --github-gray-8: #373e47;
+  --github-gray-9: #2d333b;
+  --github-gray-10: #21262e;
 }
+
+/* 
+other dark color palette
+#e91e63
+#c2185b
+#9c27b0
+#5727b0
+#272ab0
+#276bb0
+#57acdc
+#57dcbe
+#60c689
+
+--color-darkgreen-50: #68976a;
+--color-darkgreen-30: #9ebc9e;
+--color-darkgreen-10: #d9f6ce;
+
+--color-lightgreen-50: #a2bd8d;
+--color-lightgreen-30: #c6f1ba;
+--color-lightgreen-30: #e0f8d9;
+
+--color-purple-50: #bbb6cc;
+--color-purple-30: #d8d6e3;
+--color-purple-10: #f7f6f9;
+
+--color-orchid-50: #d6b6cb;
+--color-orchid-30: #e8d6e2;
+--color-orchid-10: #f9dcec;
+
+--color-yellow-50: #c7c38f;
+--color-yellow-30: #f7f6c2;
+--color-yellow-10: #fcfcec;
+
+--color-teal-50: #5dd2d4;
+--color-teal-30: #92dfe0;
+--color-teal-10: #b8edef;
+
+--color-blue-50: #5dabd4;
+--color-blue-30: #8fc1e0;
+--color-blue-10: #b8dcef;
+
+--color-azure-50: #6fc9da;
+--color-azure-30: #7bdff2;
+--color-azure-10: #95e5f5;
+
+--color-white-10: #F8F9FA;
+--color-white-20: #E9ECEF;
+--color-gray-10: #DEE2E6;
+--color-gray-20: #CED4DA;
+--color-gray-30: #ADB5BD;
+--color-gray-40: #6C757D;
+--color-gray-50: #495057;
+--color-gray-60: #343A40;
+--color-gray-70: #212529;
+*/
+
 
 * {
   padding: 0;
@@ -56,9 +167,13 @@ html {
 body {
   font-family: 'Grandstander', sans-serif;
   font-weight: 500;
-  background-color: var(--color-gray-100);
-  color: var(--color-gray-900);
+  background-color: var(--github-white);
+  color: var(--github-gray-10);
   line-height: 1.5;
+}
+
+h1 {
+  font-size: 3.8rem;
 }
 
 h2 {
@@ -75,4 +190,12 @@ h3 {
 p, span, div, section, ul, ol {
   font-size: 2.4rem;
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: inherit;
 }

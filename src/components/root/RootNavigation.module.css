@@ -1,26 +1,24 @@
-.homepage__button {
+.home__btn {
   position: fixed;
   top: 0;
   right: 0;
   padding: 1rem;
-  z-index: 3
+  z-index: 3;
+  font-size: 2rem;
 }
 
-.homepage__button a {
-  text-decoration: none;
-  color: var(--color-gray-800);
+.home__btn a {
   padding: 1rem 2rem;
   border-radius: 5px;
-  background-color: transparent;
+  background-color: var(--github-white);
+  box-shadow: var(--shadow-small);
   transition: 0.5s
 }
 
-.homepage__button a:hover {
-  background-color: var(--color-gray-150);
-  box-shadow: var(--box-shadow-primary);
+.home__btn a:hover {
+  font-size: 2.2rem;
 }
 
-.homepage__button a.active {
-  text-decoration: underline;
-  color: inherit
+.home__btn--active {
+  composes: link--active from "../../App.module.css"
 }

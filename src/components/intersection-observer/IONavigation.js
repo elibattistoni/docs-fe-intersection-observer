@@ -28,46 +28,46 @@ function IONavigation() {
     };
   }, [isIntersecting]);
 
-  const classNames = isIntersecting
-    ? `${classes.header}`
-    : `${classes.header} ${classes.sticky}`;
+  const headerStyles = isIntersecting
+    ? `${classes["header"]}`
+    : `${classes["header"]} ${classes["sticky"]}`;
 
   return (
     //! IMPORTANT CAHNGE CSS CLASSES!!!
-    <div ref={navRef} className={classes.outerContainer}>
-      <header className={classNames}>
-        <h1 className={classes.title}>
+    <div ref={navRef} className={classes["container-header"]}>
+      <header className={headerStyles}>
+        <h1 className={classes["header__title"]}>
           <NavLink to="/intersection-observer" end>
             React & Intersection Observer API
           </NavLink>
         </h1>
         <nav>
-          <ul className={classes.list}>
-            <li className={classes.listItem}>
+          <ul className={classes["nav-list"]}>
+            <li className={classes["nav-list__item"]}>
               <NavLink
                 to="/intersection-observer/basic"
                 className={({ isActive }) =>
-                  isActive ? classes.active : undefined
+                  isActive ? classes["active"] : undefined
                 }
               >
                 IO - basics
               </NavLink>
             </li>
-            <li className={classes.listItem}>
+            <li className={classes["nav-list__item"]}>
               <NavLink
                 to="/intersection-observer/variant"
                 className={({ isActive }) =>
-                  isActive ? classes.active : undefined
+                  isActive ? classes["active"] : undefined
                 }
               >
                 IO - variant
               </NavLink>
             </li>
-            <li className={classes.listItem}>
+            <li className={classes["nav-list__item"]}>
               <NavLink
                 to="/intersection-observer/custom-root"
                 className={({ isActive }) =>
-                  isActive ? classes.active : undefined
+                  isActive ? classes["active"] : undefined
                 }
               >
                 IO - custom root

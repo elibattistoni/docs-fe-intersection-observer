@@ -3,13 +3,15 @@ import classes from "./RootNavigation.module.css";
 
 function RootNavigation() {
   return (
-    <aside className={classes["homepage__button"]}>
+    <aside className={classes["home__btn"]}>
       <NavLink
         to="/"
-        className={({ isActive }) => (isActive ? classes["active"] : undefined)}
+        className={({ isActive }) =>
+          isActive ? classes["home__btn--active"] : undefined
+        }
         end
       >
-        🏠 Home
+        Home
       </NavLink>
     </aside>
   );

@@ -4,8 +4,10 @@ function RootError() {
   return (
     <>
       <RootNavigation />
-      <h2 className={classes["root-error__title"]}>An error occurred!</h2>
-      <p className={classes["root-error__description"]}>Page not found</p>
+      <section className={classes["error__container"]}>
+        <h2 className={classes["error__title"]}>An error occurred!</h2>
+        <p className={classes["error__description"]}>Page not found</p>
+      </section>
     </>
   );
 }
