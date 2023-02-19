@@ -8,16 +8,17 @@ function IONavigation() {
   const [navHeight, setNavHeight] = useState(null);
 
   useEffect(() => {
-    console.log("USEEFFECT", new Date().toLocaleTimeString());
+    // console.log("USEEFFECT", new Date().toLocaleTimeString());
 
     // get the height of the header/navigation bar --> NB this should be added to the height of the higher-level navbar
     if (navRef.current && !navHeight) {
-      console.log("set navRect height!!!!");
+      // console.log("set navRect height!!!!");
       const navRect = navRef.current.getBoundingClientRect();
       setNavHeight(navRect.top + navRect.height);
     }
 
     function onScroll() {
+      // ! NB - 100 because I want the intersection to start before the navigation bar completely exits the screen
       window.scrollY <= navHeight - 100
         ? setIsIntersecting(true)
         : setIsIntersecting(false);
@@ -44,7 +45,7 @@ function IONavigation() {
               <NavLink
                 to="/intersection-observer/basic"
                 className={({ isActive }) =>
-                  isActive ? classes["active"] : undefined
+                  isActive ? classes["nav-item--link--active"] : undefined
                 }
               >
                 IO - basics
@@ -54,7 +55,7 @@ function IONavigation() {
               <NavLink
                 to="/intersection-observer/variant"
                 className={({ isActive }) =>
-                  isActive ? classes["active"] : undefined
+                  isActive ? classes["nav-item--link--active"] : undefined
                 }
               >
                 IO - variant
@@ -64,7 +65,7 @@ function IONavigation() {
               <NavLink
                 to="/intersection-observer/custom-root"
                 className={({ isActive }) =>
-                  isActive ? classes["active"] : undefined
+                  isActive ? classes["nav-item--link--active"] : undefined
                 }
               >
                 IO - custom root

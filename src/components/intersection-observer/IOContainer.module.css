@@ -1,16 +1,13 @@
 .io-container {
-  margin-top: 10rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  /* color:  */
+  composes: flex--col from "../../App.module.css";
+  margin-top: 2rem;
+  color: var(--github-green-10);
 }
 
 .instructions {
+  composes: flex--row from "../../App.module.css";
   margin-top: 2rem;
-  display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 1rem
 }
 
@@ -27,25 +24,40 @@
 }
 
 .footer {
-  display: flex;
-  align-items: center;
+  composes: flex--row from "../../App.module.css";
   justify-content: flex-end;
-  margin-bottom: 2rem;
+  gap: 0;
+  margin-bottom: 1rem;
   width: 100vw
 }
 
 .footer__button {
-  font-size: 4rem;
-  height: 6rem;
-  width: 6rem;
+  height: 4.2rem;
+  width: 4.2rem;
   margin-right: 2rem;
   border-radius: 50%;
-  border: 1px solid;
-  /* box-shadow: ;
-  color: ;
-  background-color: ; */
+  color: var(--github-blue-8);
+  border: 1px solid var(--github-blue-8);
+  background-color: var(--github-blue-1);
+  transition: all .25s
 }
 
 .footer__button:hover {
   cursor: pointer;
+  border-width: 2px;
+  height: 4.4rem;
+  width: 4.4rem;
+  border-radius: 5px;
+}
+
+.footer__icon {
+  width: 2rem;
+  height: 100%;
+  stroke: var(--github-blue-8);
+  fill: var(--github-blue-6);
+  stroke-width: 1.6rem;
+}
+
+.footer__icon:hover {
+  stroke-width: 2.6rem;
 }

@@ -2,9 +2,10 @@
   position: fixed;
   top: 0;
   right: 0;
-  padding: 1rem;
+  padding: 1.8rem 1rem;
   z-index: 3;
   font-size: 2rem;
+  color: var(--github-blue-10)
 }
 
 .home__btn a {

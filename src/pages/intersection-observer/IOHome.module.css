@@ -1,5 +1,6 @@
 .home__container {
   composes: home__container from "../../App.module.css";
+  color: var(--github-green-10);
 }
 
 .home__description {

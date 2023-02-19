@@ -2,14 +2,11 @@
   font-size: 6rem;
   width: 400px;
   height: 150px;
-  /* background-color: ; */
-  /* border: 1px solid black; */
-  /* box-shadow: ; */
+  composes: btn--green from "../../App.module.css";
+  background-color: var(--github-green-1);
   border-radius: 5px;
   margin: 1rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  composes: flex--col from "../../App.module.css";
   transform: translateX(500px);
   opacity: 0;
   transition: 1s;

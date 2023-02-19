@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import classes from "./IOContainer.module.css";
+import { ReactComponent as CaretDoubleUp } from "./CaretDoubleUp.svg";
 
 function IOContainer({ children, title, subtitle }) {
   const containerRef = useRef();
@@ -18,7 +19,7 @@ function IOContainer({ children, title, subtitle }) {
   return (
     <main className={classes["io-container"]}>
       <h2>{title}</h2>
-      <h3 className={classes["instructions"]}>
+      <p className={classes["instructions"]}>
         Scroll down to see the effect! or click{" "}
         <span
           onClick={scrollToContainerHandler}
@@ -26,19 +27,16 @@ function IOContainer({ children, title, subtitle }) {
         >
           here
         </span>
-      </h3>
+      </p>
       <div className={classes["empty-space"]}></div>
-      <h3 ref={containerRef}>{subtitle}</h3>
-      {/*
-      //! NB where is cardsContainer class or the cards-container class
-      */}
-      <div className={classes["cards-container"]}>{children}</div>
+      <h2 ref={containerRef}>{subtitle}</h2>
+      <div>{children}</div>
       <footer className={classes["footer"]}>
         <button
           onClick={scrollToTitleHandler}
           className={classes["footer__button"]}
         >
-          &uarr;
+          <CaretDoubleUp className={classes["footer__icon"]} />
         </button>
       </footer>
     </main>
