@@ -1,12 +1,11 @@
-.description {}
-
-.description__section {
-  max-width: 70%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem
+.home__container {
+  composes: home__container from "../../App.module.css";
 }
 
-.description__list {
-  margin-left: 5rem;
+.home__description {
+  composes: home__description from "../../App.module.css";
+}
+
+.home__description ul {
+  margin-left: 4rem
 }

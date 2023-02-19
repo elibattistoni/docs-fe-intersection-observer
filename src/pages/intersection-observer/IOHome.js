@@ -2,16 +2,17 @@ import classes from "./IOHome.module.css";
 
 function IOHome() {
   return (
-    <main className={classes["description"]}>
+    <main className={classes["home__container"]}>
       <h2>Welcome!</h2>
-      <section className={classes["description__section"]}>
+      <section className={classes["home__description"]}>
         <p>
           This is a project for practicing some cool animations and transition
           features using React without the help of other libraries, using only
           the browser APIs and CSS.
+          <br />
+          This is a list of the implemented features:
         </p>
-        <p>This is a list of the implemented features:</p>
-        <ul className={classes["description__list"]}>
+        <ul>
           <li>CSS modules to apply css-scoping to single components</li>
           <li>
             React Router version 6, with the implementation of a common root

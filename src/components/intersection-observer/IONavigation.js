@@ -33,17 +33,11 @@ function IONavigation() {
     : `${classes["header"]} ${classes["sticky"]}`;
 
   return (
-    //! IMPORTANT CAHNGE CSS CLASSES!!!
     <div ref={navRef} className={classes["container-header"]}>
       <header className={headerStyles}>
-        <h1 className={classes["header__title"]}>
-          <NavLink to="/intersection-observer" end>
-            React & Intersection Observer API
-          </NavLink>
-        </h1>
         <nav>
           <ul className={classes["nav-list"]}>
-            <li className={classes["nav-list__item"]}>
+            <li className={classes["nav-item--link"]}>
               <NavLink
                 to="/intersection-observer/basic"
                 className={({ isActive }) =>
@@ -53,7 +47,7 @@ function IONavigation() {
                 IO - basics
               </NavLink>
             </li>
-            <li className={classes["nav-list__item"]}>
+            <li className={classes["nav-item--link"]}>
               <NavLink
                 to="/intersection-observer/variant"
                 className={({ isActive }) =>
@@ -63,7 +57,7 @@ function IONavigation() {
                 IO - variant
               </NavLink>
             </li>
-            <li className={classes["nav-list__item"]}>
+            <li className={classes["nav-item--link"]}>
               <NavLink
                 to="/intersection-observer/custom-root"
                 className={({ isActive }) =>

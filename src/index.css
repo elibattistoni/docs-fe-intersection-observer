@@ -174,12 +174,12 @@ body {
 
 h1 {
   font-size: 3.8rem;
+  font-weight: 500;
 }
 
 h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 2rem
+  font-size: 3.2rem;
+  font-weight: 500;
 }
 
 h3 {
@@ -188,7 +188,7 @@ h3 {
 }
 
 p, span, div, section, ul, ol {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 400;
 }
 

@@ -1,9 +1,11 @@
 .home__container {
-  width: 70%;
-  margin: auto;
-  composes: flex--col from "../../App.module.css";
+  composes: home__container from "../../App.module.css";
 }
 
 .home__description {
-  composes: flex--col from "../../App.module.css";
+  composes: home__description from "../../App.module.css";
+}
+
+.home__description ul {
+  margin-left: 4rem
 }
