@@ -7,6 +7,10 @@ function IONavigation() {
   const [isIntersecting, setIsIntersecting] = useState(true);
   const [navHeight, setNavHeight] = useState(null);
 
+  function scrollToTopHandler() {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }
+
   useEffect(() => {
     // console.log("USEEFFECT", new Date().toLocaleTimeString());
 
@@ -14,8 +18,18 @@ function IONavigation() {
     if (navRef.current && !navHeight) {
       // console.log("set navRect height!!!!");
       const navRect = navRef.current.getBoundingClientRect();
-      setNavHeight(navRect.top + navRect.height);
+
+      //! TODO IMPORTANT CHANGE THIS IS HARD CODED --> USE REDUX to set the height of the root navigation bar (185 is the height hard coded of the navbar)
+      console.log("navRect.top", navRect.top);
+      if (navRect.top <= 0) {
+        console.log("here!!!!");
+        setNavHeight(185 + navRect.height);
+      } else {
+        setNavHeight(navRect.top + navRect.height);
+      }
     }
+
+    console.log("navHeight", navHeight);
 
     function onScroll() {
       // ! NB - 100 because I want the intersection to start before the navigation bar completely exits the screen
@@ -41,7 +55,10 @@ function IONavigation() {
       <header className={headerStyles}>
         <nav>
           <ul className={classes["nav-list"]}>
-            <li className={classes["nav-item--link"]}>
+            <li
+              className={classes["nav-item--link"]}
+              onClick={scrollToTopHandler}
+            >
               <NavLink
                 to="/intersection-observer/basic"
                 className={({ isActive }) =>
@@ -51,7 +68,10 @@ function IONavigation() {
                 IO - basics
               </NavLink>
             </li>
-            <li className={classes["nav-item--link"]}>
+            <li
+              className={classes["nav-item--link"]}
+              onClick={scrollToTopHandler}
+            >
               <NavLink
                 to="/intersection-observer/variant"
                 className={({ isActive }) =>
@@ -61,7 +81,10 @@ function IONavigation() {
                 IO - variant
               </NavLink>
             </li>
-            <li className={classes["nav-item--link"]}>
+            <li
+              className={classes["nav-item--link"]}
+              onClick={scrollToTopHandler}
+            >
               <NavLink
                 to="/intersection-observer/custom-root"
                 className={({ isActive }) =>

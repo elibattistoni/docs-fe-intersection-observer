@@ -2,26 +2,23 @@
   position: fixed;
   top: 0;
   right: 0;
-  padding: 1.8rem 1rem;
+  margin: 1rem;
+  padding: .5rem 1rem;
   z-index: 3;
   font-size: 2rem;
-  color: var(--github-blue-10)
-}
-
-.home__btn a {
-  padding: 1rem 2rem;
+  color: var(--github-blue-7);
   border-radius: 5px;
   background-color: var(--github-white);
-  border: 1px solid var(--github-gray-2);
-  transition: 0.5s
+  border: 1px solid var(--github-blue-2);
+  transition: .5s
 }
 
-.home__btn a:hover {
+.home__btn:hover {
   font-size: 2.2rem;
 }
 
 .home__btn--active {
-  composes: link--active from "../../App.module.css"
+  composes: link--active from "../../App.module.css";
 }
 
 .header {
@@ -41,7 +38,7 @@
 
 .nav-item--title {
   composes: nav-item;
-  color: var(--github-blue-10);
+  color: var(--github-blue-7);
   padding-bottom: 1rem
 }
 

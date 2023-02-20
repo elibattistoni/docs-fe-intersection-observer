@@ -1,5 +1,6 @@
 .link--active {
-  text-decoration: underline;
+  padding-bottom: .05rem;
+  border-bottom: 1.2px solid var(--github-gray-5)
 }
 
 .animation--shake:hover {
