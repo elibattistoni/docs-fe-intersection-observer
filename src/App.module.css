@@ -94,3 +94,10 @@
   composes: flex--col;
   align-items: flex-start;
 }
+
+.cards-list {
+  list-style: none;
+  width: 50vw;
+  margin: 4rem auto 0;
+  composes: flex--col;
+}

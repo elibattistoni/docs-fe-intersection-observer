@@ -1,6 +1,12 @@
 import { useRef, useEffect, useState } from "react";
 
-const useBasicIntersection = (rootMargin) => {
+const useIntersectionObserver = (
+  options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+  }
+) => {
   const targetRef = useRef(null);
   const [isTargetVisible, setIsTargetVisible] = useState(false);
 
@@ -10,12 +16,6 @@ const useBasicIntersection = (rootMargin) => {
   };
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: rootMargin,
-      threshold: 0.7,
-    };
-
     const observer = new IntersectionObserver(callbackFunction, options);
 
     const target = targetRef.current;
@@ -25,9 +25,9 @@ const useBasicIntersection = (rootMargin) => {
     return () => {
       if (target) observer.unobserve(target);
     };
-  }, [targetRef]);
+  }, [targetRef, options]);
 
   return [targetRef, isTargetVisible];
 };
 
-export default useBasicIntersection;
+export default useIntersectionObserver;
