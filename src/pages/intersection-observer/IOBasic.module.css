@@ -1,3 +1,0 @@
-.cards-list {
-  composes: cards-list from "../../App.module.css";
-}

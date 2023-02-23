@@ -5,9 +5,7 @@ import RootError from "./pages/root/RootError";
 import RootHome from "./pages/root/RootHome";
 import LayoutIO from "./pages/intersection-observer/LayoutIO";
 import IOHome from "./pages/intersection-observer/IOHome";
-import IOBasic from "./pages/intersection-observer/IOBasic";
-import IOVariant from "./pages/intersection-observer/IOVariant";
-import IOCustomRoot from "./pages/intersection-observer/IOCustomRoot";
+import IntersectionObserver from "./pages/intersection-observer/IntersectionObserver";
 
 //! infinite scroll without intersection observer https://github.com/bradtraversy/vanillawebprojects/tree/master/infinite_scroll_blog
 
@@ -23,10 +21,12 @@ const router = createBrowserRouter([
         element: <LayoutIO />,
         children: [
           { index: true, element: <IOHome /> },
-          { path: "basic", element: <IOBasic /> },
-          //! the one below, make it so that the above ones do not animate
-          { path: "variant", element: <IOVariant /> },
-          { path: "custom-root", element: <IOCustomRoot /> },
+          { path: "basic", element: <IntersectionObserver type="basic" /> },
+          { path: "variant", element: <IntersectionObserver type="variant" /> },
+          {
+            path: "custom-root",
+            element: <IntersectionObserver type="custom-root" />,
+          },
         ],
       },
       /*

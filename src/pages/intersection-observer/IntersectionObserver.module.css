@@ -1,0 +1,24 @@
+.cards-list {
+  composes: cards-list from "../../App.module.css";
+}
+
+.intersecting-root {
+  background-color: var(--github-green-9);
+  color: var(--github-white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50rem;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+}
+
+.intersecting-root__title {
+  padding-top: 2rem;
+}
+
+.intersecting-root__cards-list {
+  list-style: none;
+}

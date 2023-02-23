@@ -1,4 +1,4 @@
-.card {
+.card--1 {
   font-size: 6rem;
   width: 400px;
   height: 150px;
@@ -11,7 +11,21 @@
   transition: .5s;
 }
 
-.card--show {
+.card--1--show {
   transform: translateX(0px);
   opacity: 1
+}
+
+.card--2 {
+  composes: card--1;
+  width: 200px;
+  height: 80px;
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: .5s
+}
+
+.card--2--show {
+  opacity: 1;
+  transform: translateX(0px)
 }

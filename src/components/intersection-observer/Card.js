@@ -2,52 +2,63 @@ import useIntersectionObserver from "../../hooks/intersection-observer/useInters
 
 import classes from "./Card.module.css";
 
-function Card({ cardNum, type = "basic" }) {
+function Card({ cardNum, type, root = null }) {
   //! define the custom hook based on the type of card
-  let useObserverHook;
-  let options;
-  let transformValue;
+  let useObserverHook, options, transformValue, cardClasses, cardStartPosition;
 
   switch (type) {
     case "basic":
+      //! style
+      transformValue = "translateX(500px)";
+      //! IO options
       options = {
         root: null,
-        // !margin: top | right | bottom | left
+        //! margin: top | right | bottom | left
         rootMargin: "-50px 0px 0px 0px",
         threshold: 0.7,
       };
-      transformValue = "translateX(500px)";
       useObserverHook = () => useIntersectionObserver(options);
       break;
     case "variant":
+      //! style
       const isEven = cardNum % 2 === 0;
       transformValue = `translateX(${isEven ? "-700" : "700"}px)`;
+      //! IO
       useObserverHook = () => useIntersectionObserver();
       break;
     case "custom-root":
+      //! IO options
       options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0,
+        root: root.current,
+        rootMargin: "-50px 0px 0px 0px",
+        threshold: 0.5,
       };
       useObserverHook = () => useIntersectionObserver(options);
       break;
     default:
-      console.log("The type was not typed correctly");
-      useObserverHook = () => useIntersectionObserver();
-      break;
+      throw new Error();
   }
 
   const [targetRef, isTargetVisible] = useObserverHook();
 
-  const cardStartPosition = !isTargetVisible
-    ? { transform: transformValue }
-    : null;
-
-  const cardClasses = `
-    ${classes["card"]} 
-    ${isTargetVisible ? classes["card--show"] : ""}
+  if (type !== "custom-root") {
+    cardClasses = `
+          ${classes["card--1"]} 
+          ${isTargetVisible ? classes["card--1--show"] : ""}
+        `;
+  } else {
+    cardClasses = `
+      ${classes["card--2"]} 
+      ${isTargetVisible ? classes["card--2--show"] : ""}
     `;
+  }
+
+  cardStartPosition =
+    type !== "custom-root" && !isTargetVisible
+      ? { transform: transformValue }
+      : null;
+
+  console.log("is", cardNum, "visible?", isTargetVisible);
 
   return (
     <div ref={targetRef} className={cardClasses} style={cardStartPosition}>

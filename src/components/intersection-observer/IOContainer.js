@@ -30,7 +30,7 @@ function IOContainer({ children, title, subtitle }) {
       </p>
       <div className={classes["empty-space"]}></div>
       <h2 ref={containerRef}>{subtitle}</h2>
-      <div>{children}</div>
+      {children}
       <footer className={classes["footer"]}>
         <button
           onClick={scrollToTitleHandler}
