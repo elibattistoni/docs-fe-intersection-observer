@@ -11,6 +11,7 @@ const useIntersectionObserver = (
   const [isTargetVisible, setIsTargetVisible] = useState(false);
 
   const callbackFunction = (entries) => {
+    console.log("entries", typeof entries, entries);
     const [entry] = entries;
     setIsTargetVisible(entry.isIntersecting);
   };
